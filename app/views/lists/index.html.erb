@@ -1,0 +1,9 @@
+<div class="navbar">
+  <button>My lists</button>
+  <button class="btn btn-primary new-list"><%= link_to 'Add New List', new_list_path%></button>
+</div>
+
+<h1>View Your Lists:</h1>
+<% @lists.each do |list| %>
+  <p><%= link_to list.name, list_path(list) %></p>
+<% end %>
